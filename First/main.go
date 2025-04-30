@@ -14,6 +14,7 @@ func main() {
 	fmt.Println(d)
 	//demoArray()
 	demoArray1()
+	demoSlice()
 }
 
 // This is a simple Go program that prints "Hello, World!" to the console.
@@ -37,4 +38,18 @@ func demoArray1() {
 	arr2 := [5]string{"Hello", "World", "!", "Go", "!"}
 	fmt.Println(arr1)
 	fmt.Println(arr2)
+}
+
+// slice
+func demoSlice() {
+	myslice1 := []int{}
+	fmt.Println(len(myslice1))
+	fmt.Println(cap(myslice1))
+	fmt.Println(myslice1)
+
+	myslice2 := []string{"Go", "Slices", "Are", "Powerful"}
+	fmt.Println(len(myslice2))
+	fmt.Println(cap(myslice2))
+	fmt.Println(myslice2)
+
 }
