@@ -46,7 +46,6 @@ func main() {
 	defer db.Close(context.Background())
 
 	http.HandleFunc("/", helloHandler)
-	http.HandleFunc("/event", eventHandler)
 	http.HandleFunc("/events", eventsHandler)
 
 	fmt.Println("Starting server on :8080...")
@@ -66,10 +65,6 @@ func eventsHandler(w http.ResponseWriter, r *http.Request) {
 	default:
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
 	}
-}
-
-func eventHandler(w http.ResponseWriter, r *http.Request) {
-
 }
 
 func listEventHandler(w http.ResponseWriter, r *http.Request) {
